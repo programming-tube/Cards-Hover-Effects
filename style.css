@@ -1,0 +1,34 @@
+* {
+    position: relative;
+    left: 150px;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: rgb(212, 249, 255);
+}
+.container {
+    display: flex;
+    gap: 10px;
+}
+.card {
+    background: rgb(4, 174, 204);
+    width: 140px;
+    height: 170px;
+    border-radius: 5px;
+    box-shadow: rgba(100, 100, 111, 0.473)
+        0 7px 29px 0;
+    transition: 300ms ease-in-out;
+}
+.card + .card {
+    margin-left: -10%;
+}
+.card:hover {
+    transform: rotate(-4deg);
+}
+.card:hover ~ .card {
+    z-index: 1;
+    translate: 60px;
+}
